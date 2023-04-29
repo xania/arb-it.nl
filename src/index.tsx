@@ -1,10 +1,9 @@
 ﻿import { Attrs, render } from "xania";
 import { Route, WebApp } from "xania/router";
-import { Navigation } from "./nav";
 
 import "./main.css";
-import { MainMenu } from "./components/mainmenu";
 import { Page } from "./components/page";
+import { Layout } from "./layout";
 
 function App() {
   return (
@@ -12,18 +11,16 @@ function App() {
       <Attrs class="flex flex-col" />
 
       <WebApp>
-        <Navigation />
-
-        <AppContainer>
-          <MainMenu />
-
-          <Route path="dashboard">
-            <Page class="flex-1">dashboard</Page>
-          </Route>
-          <Route path="kanban">
-            <Page class="flex-1">kanban</Page>
-          </Route>
-        </AppContainer>
+        <Layout>
+          <AppContainer>
+            <Route path="dashboard">
+              <Page class="flex-1">dashboard</Page>
+            </Route>
+            <Route path="kanban">
+              <Page class="flex-1">kanban</Page>
+            </Route>
+          </AppContainer>
+        </Layout>
       </WebApp>
     </>
   );

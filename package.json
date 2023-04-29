@@ -16,7 +16,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "xania": "0.5.32-alpha.5"
+    "xania": "^0.5.32-alpha.7"
   },
   "devDependencies": {
     "@types/node": "^18.16.1",

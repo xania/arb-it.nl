@@ -12,7 +12,7 @@ export function Navigation() {
 
   return (
     <>
-      <nav class="bg-gray-800">
+      <nav class="bg-gray-800 dark:bg-black">
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div class="relative flex h-16 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -121,8 +121,8 @@ export function Navigation() {
                   </button>
                 </div>
 
-                {/* 
-                
+                {/*
+
                   Dropdown menu, show/hide based on menu state.
 
                   Entering: "transition ease-out duration-100"
@@ -130,7 +130,7 @@ export function Navigation() {
                     To: "transform opacity-100 scale-100"
                   Leaving: "transition ease-in duration-75"
                     From: "transform opacity-100 scale-100"
-                    To: "transform opacity-0 scale-95" 
+                    To: "transform opacity-0 scale-95"
 
                 */}
                 <div
