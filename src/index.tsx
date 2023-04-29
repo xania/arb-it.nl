@@ -10,18 +10,16 @@ function App() {
     <>
       <Attrs class="flex flex-col" />
 
-      <WebApp>
-        <Layout>
-          <AppContainer>
-            <Route path="dashboard">
-              <Page class="flex-1">dashboard</Page>
-            </Route>
-            <Route path="kanban">
-              <Page class="flex-1">kanban</Page>
-            </Route>
-          </AppContainer>
-        </Layout>
-      </WebApp>
+      <Layout>
+        <AppContainer>
+          <Route path="dashboard">
+            <Page class="flex-1">dashboard</Page>
+          </Route>
+          <Route path="kanban">
+            <Page class="flex-1">kanban</Page>
+          </Route>
+        </AppContainer>
+      </Layout>
     </>
   );
 }

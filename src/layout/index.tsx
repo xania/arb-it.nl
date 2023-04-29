@@ -1,21 +1,21 @@
 ﻿import { Attrs, state } from "xania";
 import { Navigation } from "./nav";
 import { MainMenu } from "./mainmenu";
-import { Route } from "xania/router";
+import { WebApp } from "xania/router";
 
 export function Layout(props: { children: JSX.Children }) {
   const drawerOpen = state(false);
 
   return (
-    <>
+    <WebApp navigate={() => drawerOpen.update(false)}>
       <Attrs class="pt-14" />
       <Navigation drawerOpen={drawerOpen} />
 
       <aside
         id="logo-sidebar"
         class={[
-          "fixed left-0 top-0 z-40 h-screen w-64 bg-white pt-20 transition-transform dark:bg-gray-800",
-          drawerOpen.toggle("transform-none", "-translate-x-full"),
+          "fixed left-0 top-0 z-40 h-screen w-64 bg-white pt-20 dark:bg-gray-800",
+          drawerOpen.toggle("transform-none", "max-sm:-translate-x-full"),
         ]}
         aria-label="Sidebar"
       >
@@ -34,7 +34,7 @@ export function Layout(props: { children: JSX.Children }) {
       ></div>
 
       <AppContainer>{props.children}</AppContainer>
-    </>
+    </WebApp>
   );
 }
 
